@@ -60,7 +60,6 @@ public class LMS {
     }
 
     public void createBook() {
-        boolean isExiting = false;
         try {
             scan.nextLine();
             System.out.println("\n======================================");
@@ -200,32 +199,20 @@ public class LMS {
     }
 
     private boolean isTitleValid(String title) {
-        if (title.isEmpty())
-            return false;
-        else
-            return true;
+        return !title.isEmpty();
     }
 
 
     private boolean isAuthorValid(String author) {
-        if (author.isEmpty())
-            return false;
-        else
-            return true;
+        return !author.isEmpty();
     }
 
     private boolean isIsbnValid(String isbn) {
-        if (isbn.length() != 18)
-            return false;
-        else
-            return true;
+        return isbn.length() == 18;
     }
 
     private boolean isAvailableCopiesValid(String copies) {
-        if (Integer.parseInt(copies) > 0)
-            return true;
-        else
-            return false;
+        return Integer.parseInt(copies) > 0;
     }
 
     private boolean isBookListEmpty() {
