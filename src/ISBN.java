@@ -2,7 +2,7 @@
 import java.util.Scanner;
 public class ISBN {
     Scanner scan = new Scanner(System.in);
-    private String[] isbnArr = new String[5];
+    private final String[] isbnArr = new String[5];
     private String isbnStr;
 
 
@@ -10,12 +10,12 @@ public class ISBN {
 
         try {
             while (true) {
-                System.out.print("\n|  Enter the first four numbers: ");
-                String firstFourNum = scan.nextLine();
-                if (firstFourNum.length() != 4 || firstFourNum.contains("-") || Integer.parseInt(firstFourNum) < 0) {
+                System.out.print("\n|  Enter the first three numbers: ");
+                String firstThreeNum = scan.nextLine();
+                if (firstThreeNum.length() != 3 || firstThreeNum.contains("-") || Integer.parseInt(firstThreeNum) < 0) {
                     System.out.println("   INVALID INPUT!");
                 } else {
-                    isbnArr[0] = firstFourNum;
+                    isbnArr[0] = firstThreeNum;
                     break;
                 }
             }

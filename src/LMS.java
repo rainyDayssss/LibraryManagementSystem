@@ -208,7 +208,7 @@ public class LMS {
     }
 
     private boolean isIsbnValid(String isbn) {
-        return isbn.length() == 18;
+        return isbn.length() == 17;
     }
 
     private boolean isAvailableCopiesValid(String copies) {
